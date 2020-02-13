@@ -1,0 +1,123 @@
+$width: calc((100% - 60px) / 3);
+$containerHeight: calc(((100% - 50px) / 2));
+$maxImageWidth: calc(((100% - 70px) / 2));
+
+$moreWidth: calc((100% - 60px) / 2);
+
+.photos-group-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -10px 0 -10px;
+
+  .upload-phone-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fcfcfc;
+    border-radius: 8px;
+    border: 1px dashed #dddddd;
+    width: $width;
+    margin: 6px;
+    position: relative;
+
+    .upload-phone-text{
+      font-size:24px;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(190,190,190,1);
+      line-height:33px;
+      margin-top: 13px;
+    }
+  }
+
+  .photos-group-content-run{
+    border-radius: 8px;
+    width: $width;
+    height: 100%;
+    padding-bottom: $width;
+    margin: 10px;
+    position: relative;
+
+    .close-icon{
+      width: 40px;
+      height: 40px;
+      background:rgba(0,0,0,1);
+      box-shadow:0px 5px 10px 0px rgba(0,0,0,0.34);
+      border:4px solid rgba(255,255,255,1);
+      position: absolute;
+      right: -10rpx;
+      top: -10rpx;
+      border-radius: 50%;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 38px;
+    }
+  }
+
+  .photos-group-content{
+    border-radius: 8px;
+    width: $width;
+    height: 100%;
+    padding-bottom: $width;
+    margin: 10px;
+    position: relative;
+  }
+
+  .photos-item {
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+  .race-photos-group-container{
+    width: 100%;
+    height: $containerHeight;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 30px auto 0 auto;
+
+    .max-photos-content{
+      border-radius: 8px;
+      width: $maxImageWidth;
+      height: $maxImageWidth;
+      padding-bottom: $maxImageWidth;
+      position: relative;
+      margin-top: 5px;
+    }
+
+    .race-photos-right{
+      width: $containerHeight;
+      height: $containerHeight;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 5px;
+
+      .photos-group-content{
+        border-radius: 8px;
+        width: calc(((100% - 20px) / 2));
+        height: calc(((100% - 20px) / 2));
+        padding-bottom: calc(((100% - 20px) / 2));
+        margin: 5px;
+        position: relative;
+      }
+    }
+  }
+
+  .photos-group-content-more{
+    border-radius: 8px;
+    width: $moreWidth;
+    height: 100%;
+    padding-bottom: $moreWidth;
+    margin: 10px;
+    position: relative;
+  }
+}

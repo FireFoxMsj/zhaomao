@@ -1,0 +1,31 @@
+.page {
+  background: #151214;
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+.body {
+  padding: 0 50px;
+  .title {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .card {
+    background: #1E1E22;
+    padding: 30px 30px;
+    border-radius: 20px;
+    .head {
+      font-size: 30px;
+      color: #D15147;
+      margin-bottom: 20px;
+    }
+    text {
+      font-size: 30px;
+      color: #B7B6BB;
+    }
+  }
+  .card + .card {
+    margin-top: 20px;
+  }
+  padding-bottom: 50px;
+}

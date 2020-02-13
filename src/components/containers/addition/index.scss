@@ -1,0 +1,139 @@
+.various-list-container {
+  overflow: hidden;
+  background: #FFFFFF;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  
+  .various-list-view {
+    width: 100%;
+    z-index: 999 ;
+    .header {
+      background: #FFFFFF;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding-left: 20px;
+      padding-right: 40px;
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .share {
+          background: #ECDA48;
+          border-radius: 40px;
+          padding: 10px 40px;
+          text {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .view-icon{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .view-icon-one {
+        width: 60px;
+        height: 6px;
+        background: rgba(239, 239, 239, 1);
+        border-radius: 5px;
+        margin-bottom: 6px;
+        margin-top: 15px;
+      }
+
+      .view-icon-two {
+        width: 40px;
+        height: 6px;
+        background: rgba(239, 239, 239, 1);
+        border-radius: 5px;
+        opacity: 0.6;
+        margin-bottom: 10px;
+      }
+
+      .view-icon-three {
+        width: 20px;
+        height: 6px;
+        background: rgba(239, 239, 239, 1);
+        border-radius: 5px;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .operation-tab-item-class {
+    margin: 0 30px;
+  }
+  .operation-segment-one-line-class{
+    margin-top: 15px !important;
+  }
+
+  .various-list-content{
+    background:#FFFFFF;
+    .panel-header{
+      height: 90px;
+      line-height: 90px;
+      background:rgba(246,246,246,1);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .panel-header-title{
+        font-size:24px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(0,0,0,1);
+        line-height:33px;
+        padding-left: 23px;
+      }
+
+      .sort-btn-container{
+        width:270px;
+        height:54px;
+        background:rgba(235,235,235,1);
+        border-radius:30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-right: 17px;
+
+        .btn-active{
+          background:#ffffff;
+          color:rgba(0,0,0,1) !important;
+        }
+        .default-btn{
+          width:130px;
+          height:44px;
+          border-radius:30px;
+          font-size:22px;
+          font-family:PingFangSC-Regular,PingFang SC;
+          font-weight:400;
+          color:rgba(139,139,139,1);
+          line-height:44px;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+}
+.addition-holder {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.fixed {
+  position: fixed;
+  bottom: 0px;
+}
+.absoluted {
+  position: absolute;
+  top: 0px;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,53 @@
+.race-card{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .scroll-view{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .race-container{
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+
+      .race-card-item{
+        display: flex;
+        flex-direction: column;
+        width:280px;
+        margin-right: 20px;
+
+        .race-cover{
+          width:280px;
+          height:210px;
+          background:rgba(255,255,255,1);
+          border-radius: 10px;
+        }
+
+        .race-name{
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-top: 16px;
+          margin-bottom: 8px;
+          font-size:26px;
+          font-family:PingFangSC-Medium,PingFang SC;
+          font-weight:500;
+          color:rgba(246,246,246,1);
+          line-height:28px;
+        }
+        .competition-score-text{
+          font-size:22px;
+          font-family:DINPro-Regular,DINPro;
+          font-weight:400;
+          line-height:26px;
+          display: flex;
+        }
+      }
+    }
+  }
+
+
+}

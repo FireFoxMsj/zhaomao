@@ -1,0 +1,117 @@
+.tab-container {
+  height: 84px;
+  background: #fff;
+
+  .tab-list-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .tab-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+      margin: 0 40px;
+      color: #4E4E4E;
+      font-size: 32px;
+      font-weight:400;
+
+      .tab-title{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+
+        .corner-mark{
+          width:21px;
+          height:26px;
+          font-size:20px;
+          font-family:DINPro-Regular,DINPro;
+          font-weight:400;
+          line-height:26px;
+          margin-left: 5px;
+        }
+      }
+
+      .segment-one-line{
+        width:66px;
+        height:4px;
+        background:linear-gradient(117deg,rgba(255,136,0,1) 0%,rgba(255,80,0,1) 100%);
+        box-shadow:0 3px 5px 0 rgba(255,80,0,0.18);
+        border-radius:4px;
+        margin-top: 20px;
+      }
+
+      .segment-four-line{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 11px;
+        .segment-one{
+          width:35px;
+          height:5px;
+          background:rgba(255,80,0,1);
+        }
+        .segment-two{
+          width:10px;
+          height:5px;
+          background:rgba(255,80,0,1);
+          opacity:0.5;
+          margin-left: 3px;
+        }
+        .segment-three{
+          width:5px;
+          height:5px;
+          background:rgba(255,80,0,1);
+          opacity:0.2;
+          margin-left: 3px;
+        }
+        .segment-four{
+          width:5px;
+          height:5px;
+          background:rgba(255,80,0,1);
+          opacity:0.1;
+          margin-left: 3px;
+        }
+      }
+
+    }
+
+    .tab-active {
+      font-weight:600;
+      color: #FF5000;
+      position: relative;
+    }
+  }
+
+  .layout-left {
+    justify-content: flex-start;
+    height: 86px;
+    border-bottom: 1px solid #EBEBEB;
+
+    .tab-item {
+      margin: 0 20px;
+      color: #BEBEBE;
+      font-size: 32px;
+      font-weight:400;
+    }
+
+    .tab-active {
+      color: #FF5000;
+
+      .tab-corner-mark {
+        color: #FF5000;
+      }
+
+      &:after {
+        width:55px;
+        margin-top: 18px;
+        height: 4px;
+      }
+    }
+  }
+
+}
+
+
