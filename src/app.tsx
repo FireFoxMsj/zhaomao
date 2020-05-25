@@ -5,17 +5,33 @@ import './app.scss'
 class App extends Component {
   config: Config = {
     pages: [
-      'pages/home/index',
-      'pages/toys/show/index',
-      'pages/toys/show/images/index',
-      'pages/toys/show/info/index',
       'pages/index/index',
+      'pages/article/index',
+      'pages/mine/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#dbdbdb',
+      selectedColor: '#222222',
+      position: 'bottom',
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: '首页',
+          iconPath: './assets/images/home.png',
+          selectedIconPath: './assets/images/homea.png'
+        },{
+          pagePath: 'pages/mine/index',
+          text: '我的',
+          iconPath: './assets/images/me.png',
+          selectedIconPath: './assets/images/mea.png'
+        }
+      ]
     }
   }
 

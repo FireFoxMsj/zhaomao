@@ -1,6 +1,7 @@
 .navigation {
   position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   width: 100%;
   z-index: 100;
@@ -52,4 +53,28 @@
     }
   }
 }
-
+.left2 {
+  height: 30PX;
+  margin-bottom: 6PX;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 30PX;
+  margin-left: 4px;
+  .logo {
+    width: 90px;
+    height: 80px;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .slogan {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 16px;
+    
+  }
+}

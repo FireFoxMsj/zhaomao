@@ -7,7 +7,7 @@ import './index.scss'
 interface ContentProps {
   tabs: tabProp[],
   changeTab: any,
-  list: any[]
+  list: any[],
 }
 interface tabProp {
   title: string,
@@ -29,6 +29,10 @@ function Content({tabs = [], changeTab, list}: ContentProps){
     setCurrent(v)
     changeTab(v)
     switchChange(v)
+    Taro.pageScrollTo({
+      scrollTop: 100000,
+      duration: 300
+    })
   }
 
   const switchChange = (v: number) => {
@@ -64,7 +68,9 @@ function Content({tabs = [], changeTab, list}: ContentProps){
 
   const renderContentItem = (ele: any) => {
     return (
-      <View className="card">
+      <View className="card" onClick={()=>{
+        Taro.navigateTo({url: "/pages/toys/show/index"})
+      }}>
         <View>
           <Image src="https://oegquov59.qnssl.com/images/20191120/5305dd54144ba5bb420.jpg-huge" mode='aspectFill'/>
         </View>
@@ -92,14 +98,13 @@ function Content({tabs = [], changeTab, list}: ContentProps){
         indicatorDots={false}
         current={current}
         onChange={(e)=>{
-          setCurrent(e.detail.current)
-          changeTab(e.detail.current)
+          handleClick(e.detail.current)
         }}
         >
         {switchList.map((item: any, index: number) => (
           <SwiperItem key={'I'+index}>
-            {item.length>0 && item.map((itemB: any) => (
-              <View>{renderContentItem(itemB)}</View>
+            {item.length>0 && item.map((itemB: any, indexJ: number) => (
+              <View key={'J' + indexJ}>{renderContentItem(itemB)}</View>
             ))}
             {item.length == 0 && <View className="loading"><Image src={loading}/></View>}
           </SwiperItem>

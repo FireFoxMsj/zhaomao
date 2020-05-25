@@ -1,0 +1,70 @@
+.comm-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height:100px;
+  background:rgba(24,30,40,1);
+  border-radius:10px;
+  opacity:0.9;
+  padding-left: 35px;
+  padding-right: 27px;
+  .left-pri {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      
+      .number {
+          height:61px;
+          font-size:48px;
+          font-family:DINPro-Bold,DINPro;
+          font-weight:bold;
+          color:rgba(246,246,246,1);
+          line-height:61px;
+      }
+      .text {
+          height:50px;
+          font-size:28px;
+          font-family:PingFangSC-Regular,PingFang SC;
+          font-weight:400;
+          color:rgba(240,241,242,1);
+          line-height:50px;
+          letter-spacing:1px;
+          margin-left: 15px;
+      }
+  }
+  .right-pri {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      .text {
+          height:50px;
+          font-size:24px;
+          font-family:PingFangSC-Regular,PingFang SC;
+          font-weight:400;
+          color:rgba(139,139,139,1);
+          line-height:50px;
+      }
+      .price {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height:50px;
+          font-family:PingFangSC-Semibold,PingFang SC;
+          font-weight:600;
+          color:rgba(255,80,0,1);
+          line-height:50px;
+          letter-spacing:1px;
+          margin-left: 10px;
+          .pri-ico {
+              font-size: 20px;
+              line-height: 20px;
+          }
+          .pri-ico-num {
+              font-size:28px;
+          }
+      }
+  }
+}

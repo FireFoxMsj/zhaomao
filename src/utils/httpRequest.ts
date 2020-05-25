@@ -3,8 +3,8 @@ import * as GraphQl from '../apis/graphql'
 
 const Fly = require('flyio/dist/npm/wx')
 
-// const baseURL = 'https://staging..com'
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://www.ocexam.cn'
+// const baseURL = 'http://localhost:3000'
 
 const httpRequest = new Fly()
 const tokenRquest = new Fly()
@@ -16,9 +16,9 @@ const getAuth = async () => {
     query: GraphQl.createAuth,
     variables: { code }
   })
-  const { CreateAuth = {} } = res.data.data
-  const { access_token, logined } = CreateAuth
-  Taro.setStorageSync('accessToken', access_token)
+  const { createAuth = {} } = res.data.data
+  const { accessToken, logined } = createAuth
+  Taro.setStorageSync('accessToken', accessToken)
   Taro.setStorageSync('logined', logined)
   httpRequest.unlock()
 }
@@ -31,7 +31,7 @@ httpRequest.interceptors.request.use(async request => {
   if(!accessToken) {
     getAuth()
   }
-  request.headers["X-AUTH-TOKEN"] = Taro.getStorageSync('accessToken')
+  request.headers["X-ACCESS-TOKEN"] = Taro.getStorageSync('accessToken')
   return request
 })
 httpRequest.interceptors.response.use(
@@ -45,13 +45,13 @@ httpRequest.interceptors.response.use(
         Taro.showToast({ title: "网络问题", icon: 'none' })
       }
       if (status === 401 || status === 403) {
-        if(status === 401) {
+        if(status === 403) {
           Taro.reLaunch({
-            url: '/pages/login/login'
+            url: '/pages/mine/index'
           })
         } else {
           getAuth()
-          err.request.headers['X-AUTH-TOKEN'] = Taro.getStorageSync('accessToken')
+          err.request.headers['X-ACCESS-TOKEN'] = Taro.getStorageSync('accessToken')
           return await httpRequest.request(err.request)
         }
       } else {

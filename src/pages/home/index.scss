@@ -1,9 +1,67 @@
-.swiper-tabs-list {
+
+.newer-swiper-list {
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0px 30px;
+    text {
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+    .more {
+      color: #818181;
+      font-size: 24px;
+    }
+  }
   .swiper-tabs {
-    background: #F7F7F7;
+    height: 200px;
+    background: transparent;
+    .card {
+      font-size: 20px;
+      line-height: 30px;
+      display: flex;
+      background: #FFF7F5;
+      border-radius: 16px;
+      align-items: center;
+      margin: 20px 30px;
+      padding: 20px 30px;
+      .body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: space-between;
+        height: 95px;
+        .text {
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 3px;
+          line-height: 40px;
+        }
+        .hint {
+          font-size: 22px;
+          color: #C8CCCF;
+          line-height: 40px;
+        }
+      }
+      .image {
+        display: flex;
+        width: 120px;
+        height: 120px;
+        image {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
   }
 }
-
 .tab-container {
   margin: auto;
   display: flex;
@@ -51,43 +109,47 @@
     }
   }
 }
-.swiper-tabs {
-  .card {
-    font-size: 30px;
-    line-height: 46px;
-    display: flex;
-    margin: 20px;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 10px;
-    .text {
-      flex: 1;
+.swiper-tabs-list {
+  .swiper-tabs {
+    background: #F7F7F7;
+    .card {
+      font-size: 30px;
+      line-height: 46px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-left: 30px;
-      font-size: 32px;
-      font-weight: 600;
-      overflow: hidden;
-      text-overflow:ellipsis;
-      white-space: nowrap;
-      .hint {
-        font-size: 24px;
-        color: #C8CCCF;
-      }
-    }
-    image {
-      width: 150px;
-      height: 150px;
+      margin: 20px;
+      padding: 30px;
+      background: #ffffff;
       border-radius: 10px;
+      .text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 30px;
+        font-size: 32px;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        .hint {
+          font-size: 24px;
+          color: #C8CCCF;
+        }
+      }
+      image {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+      }
+      padding-bottom: 10px;
     }
-    padding-bottom: 10px;
-  }
-  .card + .card {
-    padding-top: 30px;
-    border-top: 1px solid #525461;
+    .card + .card {
+      padding-top: 30px;
+      border-top: 1px solid #525461;
+    }
   }
 }
+
 .loading {
   width: 100%;
   height: 300px;
@@ -97,5 +159,84 @@
   image {
     width: 120px;
     height: 120px;
+  }
+}
+.banner-swiper-tabs-list {
+  background: transparent;
+  .swiper-tabs {
+    background: transparent;
+    height: 360px;
+    swiper-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      image {
+        width: 96%;
+        height: 300px;
+        border-radius: 30px;
+        transition: all 0.6s;
+      }
+    }
+    .active {
+      image {
+        width: 96%;
+        height: 340px;
+        border-radius: 30px;
+        transition: all 0.6s;
+      }
+    }
+  }
+}
+.search {
+  .body {
+    height: 260px;
+    background: #E65838;
+    .one {
+      height: 104px;
+      padding-left: 20px;
+      image {
+        height: 88px;
+        width: 120px;
+      }
+    }
+    .two {
+      display: flex;
+      justify-content: center;
+      .search-input {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #F8B68E;
+        background: #E7704D;
+        border-radius: 80px;
+        height: 80px;
+        font-size: 24px;
+        letter-spacing: 4px;
+        text {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  margin-bottom: -200px; 
+  .pure-top {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .pure-top::after {
+    content: '';
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    background: #E65838;
   }
 }

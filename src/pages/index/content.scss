@@ -1,0 +1,31 @@
+.list {
+  min-height: 100vh;
+  padding-top: 20px;
+  background: #f5f5f7;
+  .fixed {
+    position: fixed;
+    z-index: 99;
+    background: #ffffff;
+  }
+  .list-container {
+    background: #f5f5f7;
+    .list-cards {
+      padding: 0 14px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .left-container, .right-container {
+      flex: 1;
+      overflow: hidden;
+    }
+    .left-container {
+      padding-right: 6px;
+    }
+    .right-container {
+      padding-left: 6px;
+    }
+  }
+}
+

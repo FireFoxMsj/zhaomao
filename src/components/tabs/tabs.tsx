@@ -131,7 +131,6 @@ const Tabs = (props: any) => {
     } else {
       setBodyStyle(defaultStyle)
     }
-    // console.log(moveDistance, isMoving, interval, MAX_INTERVAL, touchStartX)
   }
 
   const handleTouchEnd = () => {
