@@ -8,5 +8,8 @@ export default {
   article: request(GraphQl.article),
   me: request(GraphQl.me), // 我的
   like: request(GraphQl.like),
-  unlike: request(GraphQl.unlike)
+  unlike: request(GraphQl.unlike),
+  replies: request(GraphQl.replies), // 回复
+  createReply: request(GraphQl.createReply),
+  deleteReply: request(GraphQl.deleteReply)
 }

@@ -26,7 +26,7 @@ function Item(item: any){
         <View className='card-praise'>
           <IIcon icon='iconzan1' color={"#747474"} size='12'/>
           {false && <IIcon icon='iconzan2' color={"#FEC234"} size='14'/>}
-          <Text className='praise-number'>123</Text>
+          <Text className='praise-number'>{ele.count || 0}</Text>
         </View>
       </View>
     </View>

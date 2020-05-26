@@ -47,6 +47,7 @@ query($id: ID!) {
     photoUrls
     count: cachedVotesTotal
     likedByMe
+    repliesCount
     play {
       id
       name
@@ -54,6 +55,48 @@ query($id: ID!) {
     }
   }
 }
+`
+
+// 文章评论接口
+export const replies = `
+query($id: ID!, $page: Int!) {
+  toy(id: $id) {
+    replies(page: $page) {
+      id
+      date
+      user {
+        name
+        avatarUrl
+      }
+      body
+      replyTo {
+        id
+        body
+        user {
+          name
+          avatarUrl
+        }
+      }
+    }
+  }
+}`
+
+// 回复评论
+export const createReply = `
+  mutation($repliable_id: ID!, $repliable_type: String!, $body: String!, $reply_to_id: ID) {
+    createReply(input: {repliableId: $repliable_id, repliableType: $repliable_type, body: $body, replyToId: $reply_to_id}) {
+      success
+    }
+  }
+`
+
+// 删除评论
+export const deleteReply = `
+  mutation($id: ID!) {
+    deleteReply(input: {id: $id}) {
+      success
+    }
+  }
 `
 
 // 我的

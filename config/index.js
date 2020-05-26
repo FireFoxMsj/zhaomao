@@ -74,7 +74,8 @@ const config = {
         }
       }
     }
-  }
+  },
+  esnextModules: ['taro-ui']
 }
 
 module.exports = function (merge) {

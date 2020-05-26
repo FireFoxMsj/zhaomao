@@ -12,10 +12,6 @@ function Index(){
   const [ moreLoading, setMoreLoading ] = useState(true)
   const [ isRefresh, setIsRefresh ] = useState(false)
 
-  // useEffect(() => {
-  //   getList(pageId)
-  // }, [])
-
   useEffect(() => {
     getList(pageId)
   }, [pageId])
