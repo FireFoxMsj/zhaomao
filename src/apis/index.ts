@@ -6,10 +6,12 @@ export default {
   weixinUserInfo: request(GraphQl.weixinUserInfo), // 获取用户微信信息
   list: request(GraphQl.list),
   article: request(GraphQl.article),
+  relateArticles: request(GraphQl.relateArticles),
   me: request(GraphQl.me), // 我的
   like: request(GraphQl.like),
   unlike: request(GraphQl.unlike),
   replies: request(GraphQl.replies), // 回复
   createReply: request(GraphQl.createReply),
-  deleteReply: request(GraphQl.deleteReply)
+  deleteReply: request(GraphQl.deleteReply),
+  open: request(GraphQl.open)
 }

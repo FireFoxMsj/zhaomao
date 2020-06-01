@@ -22,6 +22,12 @@ const Basic = ({ barStyle = Basic.defaultProps.barStyle, style = Basic.defaultPr
     Taro.navigateBack({ delta: 1 })
   }
 
+  const goHome = () => {
+    Taro.reLaunch({
+      url: '/pages/index/index'
+    })
+  }
+  
   return (
     <View className="navigation">
       <View className={c("navigation-sample", {"black": barStyle=="black"})} style={navigationStyle}>
@@ -30,7 +36,7 @@ const Basic = ({ barStyle = Basic.defaultProps.barStyle, style = Basic.defaultPr
             <IIcon icon='iconleft1' color={barStyle=="black" ? "#222222" : "#FFFFFF"} size='16'/>
           </View>
           <View className="br" />
-          <View className="home">
+          <View className="home" onClick={() => goHome()}>
             <IIcon icon='iconHomehomepagemenu' color={barStyle=="black" ? "#222222" : "#FFFFFF"} size='18'/>
           </View>
         </View>}

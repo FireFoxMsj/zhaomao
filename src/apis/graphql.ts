@@ -56,6 +56,26 @@ query($id: ID!) {
   }
 }
 `
+export const relateArticles = `
+query($id: ID!, $page: Int) {
+  toy(id: $id) {
+    toys(page: $page) {
+      id
+      name
+      cover
+      photoUrls
+      count: cachedVotesTotal
+      likedByMe
+      repliesCount
+      play {
+        id
+        name
+        avatarUrl
+      }
+    }
+  }
+}
+`
 
 // 文章评论接口
 export const replies = `
@@ -124,5 +144,31 @@ mutation($likableId: ID!, $likableType: String!){
   deleteLike(input: {likableId: $likableId, likableType: $likableType}) {
     success
   }
+}
+`
+
+// 获取内容
+export const next = `
+query {
+  next {
+    id
+    name
+    cover
+    photoUrls
+    count: cachedVotesTotal
+    likedByMe
+    repliesCount
+    play {
+      id
+      name
+      avatarUrl
+    }
+  }
+}
+`
+
+export const open = `
+query {
+  open
 }
 `

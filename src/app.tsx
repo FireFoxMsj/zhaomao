@@ -7,7 +7,8 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/article/index',
-      'pages/mine/index'
+      'pages/mine/index',
+      'pages/test'
     ],
     window: {
       backgroundTextStyle: 'light',
