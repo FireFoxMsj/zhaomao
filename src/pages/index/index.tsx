@@ -1,8 +1,9 @@
-import Taro, { useState, useEffect, usePullDownRefresh, useReachBottom,  useShareAppMessage } from '@tarojs/taro'
+import Taro, { useState, useEffect, usePullDownRefresh, useReachBottom,  useShareAppMessage, usePageScroll } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { callApi } from '../../utils'
 import Content from "./content"
 import {logo} from "../../constants/images"
+import New from './new'
 import './index.scss'
 
 function Index(){
@@ -11,6 +12,7 @@ function Index(){
   const [ pageId, setPageId ] = useState(1)
   const [ moreLoading, setMoreLoading ] = useState(true)
   const [ isRefresh, setIsRefresh ] = useState(false)
+  const [ state, setState ]: [ any, any] = useState(false)
 
   useEffect(() => {
     getList(pageId)
@@ -30,6 +32,14 @@ function Index(){
     setIsRefresh(true)
   })
 
+  usePageScroll(res => {
+    if(res.scrollTop > 200) {
+      setState(true)
+    } else {
+      setState(false)
+    }
+  })
+
   useReachBottom(() => {
     loadMore()
   })
@@ -38,6 +48,14 @@ function Index(){
     if (moreLoading && haveNextPage) {
       setPageId((oldPageId) => oldPageId + 1)
     }
+  }
+
+  const manuRefresh = () => {
+    Taro.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    })
+    Taro.startPullDownRefresh()
   }
 
   const getList = async (pageId: number) => {
@@ -66,6 +84,7 @@ function Index(){
   return (
     <View className="page">
       <Content list={list} isRefresh={isRefresh}/>
+      <New state={state} manuRefresh={manuRefresh}/>
     </View>
   )
 }

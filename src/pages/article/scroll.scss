@@ -27,14 +27,14 @@
   font-weight: bold;
   letter-spacing: 10rpx;
 }
-.active {
-   animation: mymove 0.8s;
-}
-@keyframes mymove{
-  from {
-  transform: translateY(-400rpx) scale(0.5) rotateY(90deg);
-  }
-  to {
-  transform: translateY(0) scale(1) rotateY(0);
-  }
-}
+// .active {
+//    animation: mymove 0.8s;
+// }
+// @keyframes mymove{
+//   from {
+//   transform: translateY(-400rpx) scale(0.5) rotateY(90deg);
+//   }
+//   to {
+//   transform: translateY(0) scale(1) rotateY(0);
+//   }
+// }

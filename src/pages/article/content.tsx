@@ -120,7 +120,7 @@ function Content({toy, open}){
         <View className="two">
           {open && <View className="item" onClick={onCommentByClick}>
             <IIcon icon='iconpinglun1' color={"#FFFFFF"} size='16'/>
-            <Text>评论 {repliesCount}</Text>
+            <Text>吐槽 {repliesCount}</Text>
           </View>}
           <View className={c("item", {"active": isLike})} onClick={toggleLike}>
             {!isLike && <IIcon icon='iconzan1' color={"#FFFFFF"} size='16'/>}
@@ -178,7 +178,7 @@ function Content({toy, open}){
                   <View className="btn" onClick={() => {
                     setReplyComment(item)
                     setOpenModal(true)
-                  }}>回复</View>
+                  }}>吐槽</View>
                 </View>
               </View>
             ))}
@@ -187,7 +187,7 @@ function Content({toy, open}){
         <View className="reply" onClick={openInput}>
           <Input
               className='footer-input'
-              placeholder='写回复...'
+              placeholder='吐槽...'
               confirmType='send'
               placeholderClass='input-placeholder'
               disabled

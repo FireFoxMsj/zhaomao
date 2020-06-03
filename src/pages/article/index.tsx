@@ -67,6 +67,7 @@ function Index(){
 Index.config = {
   navigationStyle: 'custom',
   navigationBarTextStyle: 'white',
+  disableScroll: true
 }
 
 export default Index

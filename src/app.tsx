@@ -7,8 +7,7 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/article/index',
-      'pages/mine/index',
-      'pages/test'
+      'pages/mine/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -33,7 +32,14 @@ class App extends Component {
           selectedIconPath: './assets/images/mea.png'
         }
       ]
-    }
+    }, subPackages: [
+      {
+        root: 'packageArticle',
+        pages: [
+          'pages/new/index',
+        ]
+      }
+    ]
   }
 
   globalData = {
